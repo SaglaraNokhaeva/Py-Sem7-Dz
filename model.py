@@ -28,5 +28,22 @@ def add():
         data1.close()
         return guide
         
-# if a==True:
-#     add()
+def exsport_txt():
+    data = open('справочник.txt','r',encoding='UTF-8')
+    guide =[]
+    for s in data.readlines():
+        guide.append(s) 
+    data1 = open('guide1.txt','a',encoding='UTF-8')
+    data1.write("\n".join(guide)) 
+    data.close  
+    data1.close()
+
+def exsport_csv():
+    data = open('справочник.txt','r',encoding='UTF-8')
+    guide =[]
+    for s in data.readlines():
+        guide.append(s) 
+    data1 = open('guide1.csv','a',encoding='UTF-8')
+    data1.write("\n".join(guide))   
+    data.close
+    data1.close()
