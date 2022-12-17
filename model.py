@@ -1,4 +1,3 @@
-
 data = open('справочник.txt','r',encoding='UTF-8')
 guide =[]
 for s in data.readlines():
@@ -7,19 +6,20 @@ for s in data.readlines():
 data.close()
 print(guide)
 
-a=input("Добавить новый контракт (True or False)?")
+a=bool(input("Добавить новый контракт (True or False)?"))
 if a==True:
-    data = open('справочник.txt','a',encoding='UTF-8')
-    s1=input("Введите Фамилию")
+    guide =[]
+    data1 = open('справочник.txt','a',encoding='UTF-8')
+    s1=input("Введите Фамилию: ")
     guide.append(s1)
-    s1=input("Введите Имя")
+    s1=input("Введите Имя: ")
     guide.append(s1)
-    s1=input("Введите Телефон")
+    s1=input("Введите Телефон: ")
     guide.append(s1)
-    s1=input("Введите Описание")
+    s1=input("Введите Описание: ")
     guide.append(s1)
-    data.write(guide+'\n')
-    data.close()
-
+    data1.write("\n")
+    data1.write("\n".join(guide))
+    
 print(guide)
-
+data1.close()
