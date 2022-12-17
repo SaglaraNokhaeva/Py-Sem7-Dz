@@ -2,12 +2,9 @@ data = open('справочник.txt','r',encoding='UTF-8')
 guide =[]
 for s in data.readlines():
     guide.append(s) 
-
 data.close()
 print(guide)
 
-# a=bool(input("Добавить новый контракт (True or False)?"))
-# flag=bool
 def init (a):
     global flag
     flag=a
